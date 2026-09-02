@@ -1,0 +1,190 @@
+
+
+.navbar {
+  width: 100%;
+  max-width: 1180px;
+  height: 70px;
+
+  margin: 0 auto;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+}
+
+
+
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  letter-spacing: -0.6px;
+
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #2389ff;
+}
+
+
+
+.nav_links {
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav_links li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links a {
+  position: relative;
+
+  color: #8d99ac;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav_links a:hover {
+  color: #ffffff;
+}
+
+
+
+.nav_links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #2389ff;
+
+  transform: translateX(-50%);
+
+  transition: width 0.2s ease;
+}
+
+.nav_links a:hover::after {
+  width: 16px;
+}
+
+
+
+.started {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 32px;
+
+  padding: 0 16px;
+
+  border-radius: 5px;
+
+  background: #147ff0;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-shadow: 0 5px 15px rgba(20, 127, 240, 0.12);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.started:hover {
+  background: #2b91ff;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 20px rgba(20, 127, 240, 0.22);
+}
+
+
+
+
+@media (max-width: 850px) {
+
+  .navbar {
+    padding: 0 22px;
+  }
+
+  .nav_links {
+    gap: 20px;
+  }
+
+}
+
+
+
+@media (max-width: 650px) {
+
+  .navbar {
+    height: 64px;
+    padding: 0 20px;
+  }
+
+  .nav_links {
+    display: none;
+  }
+
+  .started {
+    height: 30px;
+    padding: 0 13px;
+
+    font-size: 9px;
+  }
+
+}
+
+
+
+
+@media (max-width: 380px) {
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .started {
+    padding: 0 11px;
+  }
+
+}
